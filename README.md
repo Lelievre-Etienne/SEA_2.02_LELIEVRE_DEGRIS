@@ -1,1 +1,4 @@
 # SEA_2.02_LELIEVRE_DEGRIS
+binome :
+Etienne LELIEVRE
+Gabriel DEGRIS
