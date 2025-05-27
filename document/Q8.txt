@@ -1,0 +1,34 @@
+fonction pointFixe(g, depart)
+    pour chaque X dans g faire
+        L(X) ← +∞
+        parent(X) ← None
+    fin pour
+ 
+    L(depart) ← 0
+    maj ← vrai
+ 
+    tant que maj faire
+        maj ← faux
+        pour chaque X dans g faire
+            pour chaque Y voisin de X dans g faire
+                si L(Y) > L(X) + poids(X, Y) alors
+                    L(Y) ← L(X) + poids(X, Y)
+                    parent(Y) ← X
+                    maj ← vrai
+                fin si
+            fin pour
+        fin pour
+    fin tant que
+fin fonction
+
+
+ Identifiant   Rôle                                               Type          
+
+ `g`           Graphe donné                                       Graphe        
+ `depart`      Noeud de départ                                    Noeud         
+ `X`, `Y`      Noeuds parcourus                                   Noeud         
+ `maj`         Booléen indiquant s'il y a eu une mise à jour      Booléen       
+ `L(X)`        Distance estimée entre `depart` et `X`             Réel          
+ `parent(X)`   Noeud précédent sur le plus court chemin vers `X`  Noeud ou None 
+ `poids(X,Y)`  Poids de l’arête entre X et Y                      Réel          
+ 
